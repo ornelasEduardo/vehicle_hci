@@ -27,6 +27,7 @@ $(function () {
     var temp = features.shift();
     features.push(temp);
     
+    activeChooser(features[0]);
     changeViewTo(features[0], features[features.length - 1]);
   }); 
       
@@ -36,7 +37,7 @@ $(function () {
     
       var temp = features.pop();
       features.unshift(temp);
-      
+      activeChooser(features[0]);
       changeViewTo(features[0], features[1]);
   });
   
@@ -162,4 +163,17 @@ function changeViewTo(requestedFeature, previousFeature) {
   requestedFeatureDomElem = $('.' + requestedFeature);
   previousFeatureDomElem.addClass("d-none");
   requestedFeatureDomElem.removeClass("d-none");
+}
+
+function activeChooser(currentView) {
+  switch (currentView){
+    case "map-container":
+      $('.active').removeClass("active");
+      $('.car-image').addClass("active");
+      break;
+    case "music-container":
+      $('.active').removeClass("active");
+      $('.music-image').addClass("active");
+      break;
+  }
 }
