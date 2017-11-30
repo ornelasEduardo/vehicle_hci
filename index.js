@@ -1,10 +1,10 @@
 var features = ["map-container", "music-container"]
 var requestedFeature = "map-container";
 
-$(function () { 
-  var element = document.getElementById("stage"); 
-  var mc = new Hammer(document.body);
+var element = document.getElementById("stage"); 
+var mc = new Hammer(document.body);
 
+$(function () { 
   featureIndex = features.indexOf(requestedFeature);
   previousFeature = requestedFeature;
 
@@ -156,6 +156,12 @@ initMap();
 $('.footer-image-container').on('click', function (){
   $('.active').removeClass('active');
   $(this).parents('.col-md-1').addClass('active');
+
+  if($(this).find("img").attr("src") === "img/music.png")
+    changeViewTo("music-container", "map-container");
+    
+  else if($(this).find("img").attr("src") === "img/car.png")
+    changeViewTo("map-container", "music-container");
 });
 
 function changeViewTo(requestedFeature, previousFeature) {
