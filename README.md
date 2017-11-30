@@ -1,6 +1,6 @@
 # Tesla Model 3 Display using Gestured Shortcuts as Navigation Method
 
-This is a working prototype of Tesla's Model 3 display that utilizes HammerJS for touch gesture reading. The prototype is intended to be ran off a tablet similar to the iPad Pro 12.1 inch model. 
+This is a working prototype of Tesla's Model 3 display that utilizes HammerJS for touch gesture reading. The prototype is intended to be ran off a tablet similar to the iPad Pro 12.9 inch model. 
 
 # Current Gestures
 
